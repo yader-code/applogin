@@ -12,14 +12,14 @@
     </ul>
 
     <ul class="navbar-nav mx-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="#" routerlink="/login" >Login</a>
+      <li class="nav-item" *ngIf="!isLogin">
+        <a class="nav-link" href="/login" routerlink="/login" >Login</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#" routerlink="/register">Register</a>
+      <li class="nav-item" *ngIf="!isLogin">
+        <a class="nav-link" href="/register" routerlink="/register">Register</a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">salir</a>
+      <li class="nav-item" *ngIf="isLogin">
+        <a class="nav-link" href="#" (click)="onClickLogOut()">salir</a>
       </li>
     </ul>
   </div>

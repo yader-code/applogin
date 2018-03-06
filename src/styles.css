@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+.alert.flash-message{
+    margin-top: 10px;
+}
+
+.jumbotron{
+    margin-top: 10px;
+}

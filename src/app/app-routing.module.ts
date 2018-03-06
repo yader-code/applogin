@@ -7,11 +7,13 @@ import { RegisterPageComponent } from './componentes/register-page/register-page
 import { PrivatePageComponent } from './componentes/private-page/private-page.component';
 import { NotFoundPageComponent } from './componentes/not-found-page/not-found-page.component';
 
+import { AuthGuard } from './guards/auth.guard';
+
 const routes: Routes = [
   {path: '', component: HomepageComponent},
   {path: 'login', component: LoginPageComponent},
   {path: 'register', component: RegisterPageComponent},
-  {path: 'privado', component: PrivatePageComponent},
+  {path: 'privado', component: PrivatePageComponent, canActivate: [AuthGuard]},
   {path: '**', component: NotFoundPageComponent}
 ];
 
